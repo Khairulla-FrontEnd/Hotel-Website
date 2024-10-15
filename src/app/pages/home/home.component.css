@@ -1,0 +1,43 @@
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: "Playfair Display", system-ui;
+}
+.hero-subtitle {
+  font-family: "Work Sans", system-ui;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.4px;
+}
+.hero-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero i {
+  font-size: 35px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.3s linear;
+  cursor: pointer;
+  opacity: 0;
+}
+.hero i:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.hero {
+  position: relative;
+  bottom: 120px;
+  height: 100dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+  padding-top: 250px;
+}
+.hero:hover i {
+  opacity: 1;
+}

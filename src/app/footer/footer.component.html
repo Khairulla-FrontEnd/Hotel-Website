@@ -1,0 +1,47 @@
+<footer>
+  <div class="container footer">
+    <div class="footer-top">
+      <div class="first-row">
+        <h1 class="first-row-title">About</h1>
+        <p class="first-row-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+          quos rem ullam, placeat amet.
+        </p>
+        <button class="first-row-btn">Read More</button>
+      </div>
+      <div class="second-row">
+        <h1 class="second-row-title">Quick Menu</h1>
+        <ul class="second-row-link">
+          @for(item of links1; track $index){
+          <li class="second-row-list">{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="second-row">
+        <h1 class="second-row-title">Ministries</h1>
+        <ul class="second-row-link">
+          @for(item of links2; track $index){
+          <li class="second-row-list">{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="third-row">
+        <h1 class="third-row-title">Social Icons</h1>
+        <ul class="third-row-link">
+          @for(item of links3; track $index){
+          <li class="third-row-list"><i [class]="item"></i></li>
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">
+        Copyright © 2024 All Rights Reserved | This template is made with
+        <i class="bx bxs-heart"></i> by
+        <a href="https://khairullaruzimov.vercel.app" target="_blank"
+          >Khairulla</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>

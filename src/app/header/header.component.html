@@ -1,0 +1,116 @@
+<div
+  class="header"
+  [@openClose]="isOpen ? 'open' : 'closed'"
+  [ngStyle]="{
+    boxShadow: isOpen ? '' : '0 0 30px -5px rgba(0,0,0,0.1)'
+  }"
+>
+  <header
+    class="container"
+    [ngStyle]="{
+      color: isOpen ? 'white' : 'black',
+    }"
+    [@openClose]="isOpen ? 'show' : 'hide'"
+  >
+    <a class="header-title" href="home">Suites</a>
+    <ul class="header-list">
+      @if(isOpen){
+      <li
+        *ngFor="let item of headerLinks; let i = index"
+        [ngStyle]="{
+                        color: active === i ? 'white' : 'rgba(255, 255, 255, 0.6)',
+                    }"
+        class="header-link"
+        (click)="handleClick(i)"
+      >
+        @if(item.title === "ROOMS"){
+        <div class="link-select">
+          <div class="link-title">
+            <p>ROOMS</p>
+            <i class="bx bx-chevron-down"></i>
+          </div>
+          <ul class="selectors" #selector>
+            <div class="select-pattern"></div>
+            <li
+              *ngFor="let selects of selectorLinks; let last = last"
+              class="selector-text"
+            >
+              @if(last){
+              <div class="link-select-2">
+                <div class="link-title-2">
+                  <p>Rooms</p>
+                  <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="selectors-2" #selector2>
+                  <li
+                    *ngFor="let selects2 of selectorLinks2"
+                    class="selector-text-2"
+                  >
+                    <a [routerLink]="item.link">
+                      {{ selects2 }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              }@else {
+              <a [routerLink]="item.link">{{ selects }}</a>
+              }
+            </li>
+          </ul>
+        </div>
+        }@else {
+        <a [routerLink]="item.link">{{ item.title }}</a>
+        }
+      </li>
+      }@else {
+      <li
+        *ngFor="let item of headerLinks; let i = index"
+        [ngStyle]="{
+                        color: active === i ? 'red' : '#66666699',
+                    }"
+        [ngClass]="active === i ? 'selected' : 'unselected'"
+        (click)="handleClick(i)"
+      >
+        @if(item.title === "ROOMS"){
+        <div class="link-select">
+          <div class="link-title">
+            <p>ROOMS</p>
+            <i class="bx bx-chevron-down"></i>
+          </div>
+          <ul class="selectors" #selector>
+            <div class="select-pattern"></div>
+            <li
+              *ngFor="let selects of selectorLinks; let last = last"
+              class="selector-text"
+            >
+              @if(last){
+              <div class="link-select-2">
+                <div class="link-title-2">
+                  <p>Rooms</p>
+                  <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="selectors-2" #selector2>
+                  <li
+                    *ngFor="let selects2 of selectorLinks2"
+                    class="selector-text-2"
+                  >
+                    <a [routerLink]="item.link">
+                      {{ selects2 }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              }@else {
+              <a [routerLink]="item.link">{{ selects }}</a>
+              }
+            </li>
+          </ul>
+        </div>
+        }@else {
+        <a [routerLink]="item.link">{{ item.title }}</a>
+        }
+      </li>
+      }
+    </ul>
+  </header>
+</div>

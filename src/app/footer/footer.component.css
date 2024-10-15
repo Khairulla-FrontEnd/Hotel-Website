@@ -1,0 +1,93 @@
+footer {
+  background-color: #000000cc;
+  color: white;
+}
+.footer-top {
+  padding-block: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.first-row-title {
+  font-size: 20px;
+  font-family: "Work Sans", system-ui;
+  font-weight: 400;
+}
+.first-row-subtitle {
+  font-family: "Work Sans", system-ui;
+  width: 349px;
+  color: #ffffff80;
+  line-height: 27px;
+  padding-bottom: 16px;
+  padding-top: 24px;
+}
+.first-row-btn {
+  padding-inline: 24px;
+  padding-block: 8px;
+  border: 0;
+  background-color: #f23a2e;
+  font-family: "Work Sans", system-ui;
+  transition: 0.3s;
+  transition-timing-function: ease;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+}
+.first-row-btn:hover {
+  background-color: #c72115;
+  box-shadow: 1px 1px 10px 1px black;
+}
+.second-row-title {
+  font-size: 20px;
+  font-family: "Work Sans", system-ui;
+  font-weight: 400;
+}
+.second-row-list {
+  font-family: "Work Sans", system-ui;
+  color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+.second-row-list:hover {
+  color: white;
+}
+.second-row-link {
+  line-height: 35px;
+  padding-top: 24px;
+}
+.third-row-title {
+  font-size: 20px;
+  font-family: "Work Sans", system-ui;
+  font-weight: 400;
+}
+.third-row-list {
+  font-family: "Work Sans", system-ui;
+  color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+  font-size: 20px;
+}
+.third-row-list:hover {
+  color: white;
+}
+.third-row-link {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.copyright {
+  color: #ffffff80;
+  font-family: "Work Sans", system-ui;
+  text-align: center;
+}
+.copyright a {
+  color: #ffffff4d;
+}
+.copyright i {
+  color: red;
+}
+.footer-bottom {
+  padding-bottom: 60px;
+}
